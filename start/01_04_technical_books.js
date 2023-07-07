@@ -24,10 +24,27 @@ class Book {
   sell(numCopiesSold = 1) {
     this.numCopies -= numCopiesSold;
   }
-  
+
   restock(numCopiesStocked = 5) {
     this.numCopies += numCopiesStocked;
   }
 }
 
 // Write your code here
+// The object method through class
+// INHERITANCE
+class TechnicalBook extends Book {
+  constructor(title, author, ISBN, numCopies, edition) {
+    super(title, author, ISBN, numCopies);
+    this.edition = edition;
+  }
+  getEdition() {
+    return `The current version of this book is ${this.edition}`;
+  }
+}
+const crackingTheCodingInterview = new TechnicalBook(
+  "crackingTheCodingInterview",
+  "Something"
+);
+console.log(crackingTheCodingInterview.availability);
+console.log(crackingTheCodingInterview.getEdition());
