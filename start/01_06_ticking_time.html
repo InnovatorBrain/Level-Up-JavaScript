@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticking Time</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ticking Time</title>
-</head>
+  <body>
+    <!-- To run this file right click the file in the navigation bar and select "Open with live server. Then open the developer tools in the browser and head to the console window."-->
 
-<body>
-  <!-- To run this file right click the file in the navigation bar and select "Open with live server. Then open the developer tools in the browser and head to the console window."-->
+    <!-- Use this element to render your clock -->
+    <div id="clock"></div>
 
-  <!-- Use this element to render your clock -->
-  <div id="clock"></div>
+    <script>
+      // #Call back function is the function that take to other functions as argument and get called at latter point in time:
+      function clock() {
+        const clockNode = document.querySelector("#clock");
+        return setInterval(() => {
+          let currentDate = new Date();
+          let ticking = currentDate.toLocaleTimeString();
+          clockNode.textContent = ticking;
+        }, 1000);
+      }
 
-  <script>
-    // Write your code here
-    
-  </script>
-</body>
-
+      clock();
+    </script>
+  </body>
 </html>
