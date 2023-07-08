@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Colors</title>
+    <style>
+      body {
+        text-align: center;
+        margin-top: 100px;
+        font-size: 24px;
+      }
+      button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 5px;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Colors</title>
-</head>
+  <body>
+    <!-- To run this file right click the file in the navigation bar and select "Open with live server. Then open the developer tools in the browser and head to the console window."-->
 
-<body>
-  <!-- To run this file right click the file in the navigation bar and select "Open with live server. Then open the developer tools in the browser and head to the console window."-->
+    <!-- Use these elements to trigger the color change -->
+    <button id="blue" onclick="changeColor('blue')">Blue</button>
+    <button id="pink" onclick="changeColor('pink')">Pink</button>
+    <button id="green" onclick="changeColor('green')">Green</button>
 
-  <!-- Use these elements to trigger the color change -->
-  <button id="blue">Blue</button>
-  <button id="pink">Pink</button>
-  <button id="green">Green</button>
-
-  <script>
-    // Write your code here
-
-  </script>
-</body>
-
+    <script>
+      // Change Body colors:
+      function changeColor(color) {
+        document.body.style.backgroundColor = color;
+      }
+    </script>
+  </body>
 </html>
